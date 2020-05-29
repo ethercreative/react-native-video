@@ -716,22 +716,22 @@ static int const RCTVideoUnset = -1;
     }
   } else if (object == _playerViewController.contentOverlayView) {
       // when controls==true, this is a hack to reset the rootview when rotation happens in fullscreen
-      if ([keyPath isEqualToString:@"frame"]) {
+//       if ([keyPath isEqualToString:@"frame"]) {
 
-        CGRect oldRect = [change[NSKeyValueChangeOldKey] CGRectValue];
-        CGRect newRect = [change[NSKeyValueChangeNewKey] CGRectValue];
+//         CGRect oldRect = [change[NSKeyValueChangeOldKey] CGRectValue];
+//         CGRect newRect = [change[NSKeyValueChangeNewKey] CGRectValue];
 
-        if (!CGRectEqualToRect(oldRect, newRect)) {
-          if (CGRectEqualToRect(newRect, [UIScreen mainScreen].bounds)) {
-            NSLog(@"in fullscreen");
+//         if (!CGRectEqualToRect(oldRect, newRect)) {
+//           if (CGRectEqualToRect(newRect, [UIScreen mainScreen].bounds)) {
+//             NSLog(@"in fullscreen");
 
-            [self.reactViewController.view setFrame:[UIScreen mainScreen].bounds];
-            [self.reactViewController.view setNeedsLayout];
-          } else NSLog(@"not fullscreen");
-        }
+//             [self.reactViewController.view setFrame:[UIScreen mainScreen].bounds];
+//             [self.reactViewController.view setNeedsLayout];
+//           } else NSLog(@"not fullscreen");
+//         }
 
-        return;
-      }
+//         return;
+//       }
   }
 }
 
